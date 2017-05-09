@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_margin_long">16dp</dimen>
+    <dimen name="common_margin_middle">8dp</dimen>
+    <dimen name="common_margin_short">4dp</dimen>
+
+    <dimen name="search_list_query_bar">56dp</dimen>
+</resources>
