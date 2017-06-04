@@ -5,4 +5,11 @@
     <dimen name="common_margin_short">4dp</dimen>
 
     <dimen name="search_list_query_bar">56dp</dimen>
+
+    <dimen name="search_restaurant_cell_height">120dp</dimen>
+    <dimen name="search_restaurant_cell_image_size">100dp</dimen>
+    <dimen name="search_restaurant_cell_margin">10dp</dimen>
+    <dimen name="search_restaurant_cell_keywords_height">20dp</dimen>
+    <dimen name="search_restaurant_cell_score_text_size">32sp</dimen>
+    <dimen name="search_restaurant_cell_score_label_text_size">16sp</dimen>
 </resources>
