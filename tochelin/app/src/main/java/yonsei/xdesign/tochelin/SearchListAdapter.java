@@ -11,11 +11,14 @@ import yonsei.xdesign.tochelin.models.Restaurant;
 
 public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.ViewHolder> {
 
-    Restaurant[] restaurants;
-    SearchListActivity.SearchItemListener listener;
+    public interface SearchItemListener {
+        void onSearchItemClicked(Restaurant restaurant);
+    }
 
-    public SearchListAdapter(Restaurant[] restaurants,
-                             SearchListActivity.SearchItemListener listener) {
+    Restaurant[] restaurants;
+    SearchItemListener listener;
+
+    public SearchListAdapter(Restaurant[] restaurants, SearchItemListener listener) {
         this.restaurants = restaurants;
         this.listener = listener;
     }

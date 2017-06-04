@@ -11,10 +11,6 @@ import yonsei.xdesign.tochelin.models.Restaurant;
 
 public class SearchListActivity extends AppCompatActivity {
 
-    public interface SearchItemListener {
-        void onSearchItemClicked(Restaurant restaurant);
-    }
-
     private SearchListActivityBinding binding;
     private Restaurant[] restaurants = ModelSampler.getRestaurants();
 
@@ -23,19 +19,21 @@ public class SearchListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.search_list_activity);
 
-        initView(getIntent());
+        initData(getIntent());
     }
 
-    private void initView(Intent intent) {
+    private void initData(Intent intent) {
         String query = intent.getStringExtra(IntentKeyMap.INTENT_KEY_MAIN_TO_SEARCH_QUERY_KEY);
         binding.searchBar.setQuery(query, false);
 
-        SearchListAdapter adapter = new SearchListAdapter(restaurants, new SearchItemListener() {
-            @Override
-            public void onSearchItemClicked(Restaurant restaurant) {
-                initiateDetailActivity(restaurant);
-            }
-        });
+        SearchListAdapter adapter = new SearchListAdapter(
+                restaurants,
+                new SearchListAdapter.SearchItemListener() {
+                    @Override
+                    public void onSearchItemClicked(Restaurant restaurant) {
+                        initiateDetailActivity(restaurant);
+                    }
+                });
         binding.restaurantList.setAdapter(adapter);
     }
 
@@ -43,7 +41,7 @@ public class SearchListActivity extends AppCompatActivity {
         System.out.println("InitiateDetailActivity");
         Intent intent = new Intent(this, RestaurantDetailActivity.class);
         intent.putExtra(
-                IntentKeyMap.INTENT_KEY_SEARCH_TO_DETAIL_RESTAURANT_KEY, restaurant);
+                IntentKeyMap.INTENT_KEY_SEARCH_TO_RESTAURANT_DETAIL_RESTAURANT_KEY, restaurant);
         startActivity(intent);
     }
 }

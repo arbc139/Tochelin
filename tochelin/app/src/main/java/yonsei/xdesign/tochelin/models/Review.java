@@ -7,15 +7,17 @@ public class Review implements Parcelable {
 
     public String id;
     public String name;
+    public String from;
     public String date;
     public String content;
     public String thumbnailImageUrl;
     public String[] imageUrls;
 
-    public Review(String id, String name, String date, String content, String thumbnailImageUrl,
-                  String[] imageUrls) {
+    public Review(String id, String name, String from, String date, String content,
+                  String thumbnailImageUrl, String[] imageUrls) {
         this.id = id;
         this.name = name;
+        this.from = from;
         this.date = date;
         this.content = content;
         this.thumbnailImageUrl = thumbnailImageUrl;
@@ -31,6 +33,7 @@ public class Review implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.id);
         dest.writeString(this.name);
+        dest.writeString(this.from);
         dest.writeString(this.date);
         dest.writeString(this.content);
         dest.writeString(this.thumbnailImageUrl);
@@ -40,13 +43,14 @@ public class Review implements Parcelable {
     protected Review(Parcel in) {
         this.id = in.readString();
         this.name = in.readString();
+        this.from = in.readString();
         this.date = in.readString();
         this.content = in.readString();
         this.thumbnailImageUrl = in.readString();
         this.imageUrls = in.createStringArray();
     }
 
-    public static final Parcelable.Creator<Review> CREATOR = new Parcelable.Creator<Review>() {
+    public static final Creator<Review> CREATOR = new Creator<Review>() {
         @Override
         public Review createFromParcel(Parcel source) {
             return new Review(source);

@@ -18,6 +18,8 @@
         </activity>
         <activity android:name="yonsei.xdesign.tochelin.RestaurantDetailActivity">
         </activity>
+        <activity android:name="yonsei.xdesign.tochelin.StatDetailActivity">
+        </activity>
     </application>
 
 </manifest>

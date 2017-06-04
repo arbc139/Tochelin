@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/search_restaurant_cell_height"
         android:orientation="horizontal"
-        android:padding="@dimen/search_restaurant_cell_margin"
+        android:padding="@dimen/common_margin_middle"
         android:background="?selectableItemBackground">
 
         <ImageView

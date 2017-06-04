@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_margin_middle">
+
+        <LinearLayout
+            android:layout_width="@dimen/review_user_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/common_margin_long">
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/review_user_width"
+                android:layout_height="@dimen/review_user_width"
+                android:layout_marginBottom="@dimen/common_margin_short"/>
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="송하영"
+                android:textSize="@dimen/review_user_text_size"
+                android:layout_marginBottom="@dimen/common_margin_middle"/>
+            <TextView
+                android:id="@+id/review_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="네이버"
+                android:textSize="@dimen/review_user_text_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/review_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-01-02"
+                android:textSize="@dimen/review_content_text_size"/>
+            <TextView
+                android:id="@+id/review_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="친구들끼리 가서 연어 파스타"
+                android:textSize="@dimen/review_content_text_size"
+                android:layout_marginBottom="@dimen/common_margin_middle"/>
+            <LinearLayout
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/review_content_images_height"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
