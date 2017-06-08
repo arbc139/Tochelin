@@ -4,11 +4,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/search_restaurant_cell_height"
+        android:background="?selectableItemBackground"
         android:orientation="horizontal"
-        android:padding="@dimen/common_margin_middle"
-        android:background="?selectableItemBackground">
+        android:padding="@dimen/common_margin_middle">
 
         <ImageView
+            android:id="@+id/restaurant_image"
             android:layout_width="@dimen/search_restaurant_cell_image_size"
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/common_margin_long" />
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="불만 점수"
-                android:textSize="@dimen/search_restaurant_cell_score_label_text_size"/>
+                android:textSize="@dimen/search_restaurant_cell_score_label_text_size" />
         </LinearLayout>
     </LinearLayout>
 </layout>

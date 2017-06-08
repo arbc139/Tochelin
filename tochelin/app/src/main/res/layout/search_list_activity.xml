@@ -15,14 +15,14 @@
             android:layout_marginStart="@dimen/common_margin_short"
             android:layout_marginTop="@dimen/common_margin_middle"
             android:orientation="horizontal">
+
             <android.support.v7.widget.SearchView
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/common_margin_long"
                 android:layout_marginEnd="@dimen/common_margin_long"
-                android:background="@drawable/border_rectangle">
-            </android.support.v7.widget.SearchView>
+                android:layout_marginStart="@dimen/common_margin_long"
+                android:background="@drawable/border_rectangle"/>
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
@@ -32,6 +32,6 @@
             android:layout_marginEnd="@dimen/common_margin_short"
             android:layout_marginStart="@dimen/common_margin_short"
             android:layout_weight="1"
-            app:layoutManager="LinearLayoutManager"/>
+            app:layoutManager="LinearLayoutManager" />
     </LinearLayout>
 </layout>

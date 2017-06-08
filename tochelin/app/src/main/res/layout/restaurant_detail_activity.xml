@@ -37,70 +37,75 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/restaurant_detail_keywords_height"
-                android:padding="@dimen/common_margin_long"
-                android:layout_marginBottom="@dimen/common_margin_long">
+                android:layout_marginBottom="@dimen/common_margin_long"
+                android:padding="@dimen/common_margin_long">
+
                 <me.gujun.android.taggroup.TagGroup
                     android:id="@+id/keywords"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </me.gujun.android.taggroup.TagGroup>
+                    android:layout_height="match_parent"/>
             </LinearLayout>
 
             <com.github.mikephil.charting.charts.RadarChart
                 android:id="@+id/stats"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/restaurant_detail_stats_height"
-                android:layout_marginBottom="@dimen/common_margin_long">
-            </com.github.mikephil.charting.charts.RadarChart>
+                android:layout_marginBottom="@dimen/common_margin_long"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/restaurant_detail_keywords_height"
-                android:padding="@dimen/common_margin_long"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:padding="@dimen/common_margin_long">
+
                 <Button
                     android:id="@+id/stat_detail_1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="맛"/>
+                    android:text="맛" />
+
                 <Button
                     android:id="@+id/stat_detail_2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="위생"/>
+                    android:text="위생" />
+
                 <Button
                     android:id="@+id/stat_detail_3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="대기시간"/>
+                    android:text="대기시간" />
+
                 <Button
                     android:id="@+id/stat_detail_4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="서비스"/>
+                    android:text="서비스" />
+
                 <Button
                     android:id="@+id/stat_detail_5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="접근성"/>
+                    android:text="접근성" />
+
                 <Button
                     android:id="@+id/stat_detail_6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackground"
-                    android:text="가성비"/>
+                    android:text="가성비" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

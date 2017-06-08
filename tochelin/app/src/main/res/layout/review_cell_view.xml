@@ -8,30 +8,33 @@
         android:padding="@dimen/common_margin_middle">
 
         <LinearLayout
-            android:layout_width="@dimen/review_user_width"
+            android:layout_width="@dimen/review_user_size"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="@dimen/common_margin_long">
+            android:layout_marginEnd="@dimen/common_margin_long"
+            android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/user_image"
-                android:layout_width="@dimen/review_user_width"
-                android:layout_height="@dimen/review_user_width"
-                android:layout_marginBottom="@dimen/common_margin_short"/>
+                android:layout_width="@dimen/review_user_size"
+                android:layout_height="@dimen/review_user_size"
+                android:layout_marginBottom="@dimen/common_margin_short" />
+
             <TextView
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin_middle"
                 android:gravity="center"
                 android:text="송하영"
-                android:textSize="@dimen/review_user_text_size"
-                android:layout_marginBottom="@dimen/common_margin_middle"/>
+                android:textSize="@dimen/review_user_text_size" />
+
             <TextView
                 android:id="@+id/review_from"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="네이버"
-                android:textSize="@dimen/review_user_text_size"/>
+                android:textSize="@dimen/review_user_text_size" />
         </LinearLayout>
 
         <LinearLayout
@@ -39,25 +42,27 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/review_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2017-01-02"
-                android:textSize="@dimen/review_content_text_size"/>
+                android:textSize="@dimen/review_content_text_size" />
+
             <TextView
                 android:id="@+id/review_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin_middle"
                 android:text="친구들끼리 가서 연어 파스타"
-                android:textSize="@dimen/review_content_text_size"
-                android:layout_marginBottom="@dimen/common_margin_middle"/>
+                android:textSize="@dimen/review_content_text_size" />
+
             <LinearLayout
                 android:id="@+id/images"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/review_content_images_height"
-                android:orientation="horizontal">
-            </LinearLayout>
+                android:orientation="horizontal"/>
         </LinearLayout>
 
     </LinearLayout>

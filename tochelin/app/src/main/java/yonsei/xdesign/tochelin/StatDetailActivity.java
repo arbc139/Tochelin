@@ -34,7 +34,7 @@ public class StatDetailActivity extends AppCompatActivity {
         binding.statTitle.setText(restaurant.title + " - " + stat.kind);
         binding.restaurantScore.setText(restaurant.score);
         binding.keywords.setTags(stat.keywords);
-        ReviewListAdapter adapter = new ReviewListAdapter(stat.reviews);
+        ReviewListAdapter adapter = new ReviewListAdapter(this, stat.reviews);
         binding.reviews.setAdapter(adapter);
     }
 }

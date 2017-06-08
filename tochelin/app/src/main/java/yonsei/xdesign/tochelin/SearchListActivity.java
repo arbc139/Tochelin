@@ -27,6 +27,7 @@ public class SearchListActivity extends AppCompatActivity {
         binding.searchBar.setQuery(query, false);
 
         SearchListAdapter adapter = new SearchListAdapter(
+                this,
                 restaurants,
                 new SearchListAdapter.SearchItemListener() {
                     @Override

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,13 +13,11 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="LOGO"
-                android:textColor="@color/colorAccent"
-                android:textSize="32sp"/>
+                android:src="@drawable/tochelin_logo" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -31,16 +30,14 @@
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:layout_marginStart="@dimen/common_margin_long"
                 android:layout_marginEnd="@dimen/common_margin_long"
-                android:background="@drawable/border_rectangle">
-            </android.support.v7.widget.SearchView>
+                android:layout_marginStart="@dimen/common_margin_long"
+                android:background="@drawable/border_rectangle"/>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="128dp">
-        </LinearLayout>
+            android:layout_height="128dp"
+            android:orientation="vertical"/>
     </LinearLayout>
 </layout>

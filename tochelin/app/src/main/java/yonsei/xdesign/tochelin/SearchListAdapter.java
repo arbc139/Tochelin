@@ -1,10 +1,13 @@
 package yonsei.xdesign.tochelin;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import yonsei.xdesign.tochelin.databinding.SearchRestaurantCellViewBinding;
 import yonsei.xdesign.tochelin.models.Restaurant;
@@ -15,10 +18,12 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Vi
         void onSearchItemClicked(Restaurant restaurant);
     }
 
+    Context context;
     Restaurant[] restaurants;
     SearchItemListener listener;
 
-    public SearchListAdapter(Restaurant[] restaurants, SearchItemListener listener) {
+    public SearchListAdapter(Context context, Restaurant[] restaurants, SearchItemListener listener) {
+        this.context = context;
         this.restaurants = restaurants;
         this.listener = listener;
     }
@@ -55,6 +60,11 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Vi
 
         public void bind(Restaurant restaurant) {
             this.restaurant = restaurant;
+            Picasso.with(context)
+                    .load(restaurant.imageUrl)
+                    .resizeDimen(R.dimen.search_restaurant_cell_image_size, R.dimen.search_restaurant_cell_image_size)
+                    .centerCrop()
+                    .into(binding.restaurantImage);
             binding.title.setText(restaurant.title);
             binding.location.setText(restaurant.location);
             binding.category.setText(restaurant.category);

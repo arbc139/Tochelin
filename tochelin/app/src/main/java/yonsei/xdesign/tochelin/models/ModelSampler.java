@@ -13,7 +13,7 @@ public class ModelSampler {
                                 "짜다", "비싸다"
                         },
                         "8.2",
-                        "https://s-media-cache-ak0.pinimg.com/736x/47/05/e7/4705e78e484bd41ba317053174371399.jpg",
+                        "http://www.thekrausemouse.com/wp-content/uploads/2016/03/sample-1.jpg",
                         ModelSampler.getStats()),
                 new Restaurant(
                         "restaurantId2",
@@ -25,7 +25,7 @@ public class ModelSampler {
                                 "짜다", "비싸다"
                         },
                         "8.2",
-                        "https://s-media-cache-ak0.pinimg.com/736x/47/05/e7/4705e78e484bd41ba317053174371399.jpg",
+                        "http://www.thekrausemouse.com/wp-content/uploads/2016/03/sample-1.jpg",
                         ModelSampler.getStats()),
                 new Restaurant(
                         "restaurantId3",
@@ -37,7 +37,7 @@ public class ModelSampler {
                                 "짜다", "비싸다"
                         },
                         "8.2",
-                        "https://s-media-cache-ak0.pinimg.com/736x/47/05/e7/4705e78e484bd41ba317053174371399.jpg",
+                        "http://www.thekrausemouse.com/wp-content/uploads/2016/03/sample-1.jpg",
                         ModelSampler.getStats()),
         };
     }
