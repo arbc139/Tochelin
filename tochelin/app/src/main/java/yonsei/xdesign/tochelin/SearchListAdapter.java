@@ -94,7 +94,6 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Vi
         @Override
         public void onClick(View view) {
             listener.onSearchItemClicked(restaurant);
-            Toast.makeText(view.getContext(), "Restaurant clicked", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.RadarData;
 import com.github.mikephil.charting.data.RadarDataSet;
 import com.github.mikephil.charting.data.RadarEntry;
@@ -73,12 +72,28 @@ public class RestaurantDetailActivity extends AppCompatActivity implements View.
         binding.stats.getData().setLabels(labels);
         binding.stats.getDescription().setEnabled(false);
         binding.stats.getLegend().setEnabled(false);
-        YAxis axis = binding.stats.getYAxis();
-        axis.setGranularity(1f);
-        axis.setAxisMaximum(5);
-        axis.setAxisMinimum(0);
-        axis.setTextSize(12f);
-        axis.setValueFormatter(new IAxisValueFormatter() {
+
+        binding.stats.getXAxis().setGranularity(1f);
+        binding.stats.getXAxis().setAxisMaximum(5);
+        binding.stats.getXAxis().setAxisMinimum(0);
+        binding.stats.getXAxis().setTextSize(18f);
+        binding.stats.getXAxis().setLabelCount(6, true);
+        binding.stats.getXAxis().setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                if ((int) value >= labels.size()) {
+                    return "";
+                }
+                return labels.get((int) value);
+            }
+        });
+
+        binding.stats.getYAxis().setGranularity(1f);
+        binding.stats.getYAxis().setAxisMaximum(5);
+        binding.stats.getYAxis().setAxisMinimum(0);
+        binding.stats.getYAxis().setTextSize(12f);
+        binding.stats.getYAxis().setLabelCount(5, true);
+        binding.stats.getYAxis().setValueFormatter(new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {
                 return String.valueOf(Math.round(value));
@@ -89,7 +104,7 @@ public class RestaurantDetailActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(View view) {
-        Stat stat = null;
+        Stat stat;
         switch (view.getId()) {
             case R.id.stat_detail_1:
                 stat = restaurant.stats[0];

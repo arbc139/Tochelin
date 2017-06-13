@@ -7,4 +7,10 @@
     <!-- Custom color -->
     <color name="common_white">#FFFFFF</color>
     <color name="common_black">#212121</color>
+
+    <color name="title">#212121</color>
+    <color name="score">#558E28</color>
+    <color name="content">#757575</color>
+    <color name="keyword">#C78D00</color>
+    <color name="review_content">#424242</color>
 </resources>

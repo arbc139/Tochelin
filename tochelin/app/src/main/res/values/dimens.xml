@@ -10,17 +10,17 @@
     <dimen name="search_restaurant_cell_image_size">112dp</dimen>
     <dimen name="search_restaurant_cell_margin">10dp</dimen>
     <dimen name="search_restaurant_cell_keywords_height">20dp</dimen>
+    <dimen name="search_restaurant_cell_score_width">80dp</dimen>
     <dimen name="search_restaurant_cell_score_text_size">32sp</dimen>
     <dimen name="search_restaurant_cell_score_label_text_size">16sp</dimen>
 
     <dimen name="restaurant_detail_title_height">96dp</dimen>
     <dimen name="restaurant_detail_title_text_size">32sp</dimen>
-    <dimen name="restaurant_detail_keywords_height">128dp</dimen>
     <dimen name="restaurant_detail_stats_height">384dp</dimen>
+    <dimen name="restaurant_detail_stat_button_height">128dp</dimen>
 
     <dimen name="stat_detail_title_height">96dp</dimen>
     <dimen name="stat_detail_title_text_size">32sp</dimen>
-    <dimen name="stat_detail_keywords_height">128dp</dimen>
 
     <dimen name="review_user_size">64dp</dimen>
     <dimen name="review_user_text_size">14sp</dimen>

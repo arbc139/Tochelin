@@ -24,9 +24,12 @@
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="1. Title"
+                android:textColor="@color/title"
                 android:textSize="16sp" />
 
             <TextView
@@ -34,21 +37,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="location" />
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="location"
+                android:textColor="@color/content" />
 
             <TextView
                 android:id="@+id/category"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="category" />
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="category"
+                android:textColor="@color/content" />
 
-            <TextView
-                android:id="@+id/review_count"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="review count" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="분석 리뷰: "
+                    android:textColor="@color/content" />
+
+                <TextView
+                    android:id="@+id/review_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="review count"
+                    android:textColor="@color/content" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/keywords"
@@ -69,14 +94,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/common_margin_middle"
-                    android:text="keyword1" />
+                    android:text="keyword1"
+                    android:textColor="@color/keyword" />
 
                 <ImageView
                     android:id="@+id/keyword2_image"
                     android:layout_width="@dimen/search_restaurant_cell_keywords_height"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/common_margin_middle"
-                    android:src="@drawable/ic_dining_black"
+                    android:src="@drawable/ic_atm_black"
                     android:tint="@color/common_black" />
 
                 <TextView
@@ -84,12 +110,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/common_margin_middle"
-                    android:text="keyword2" />
+                    android:text="keyword2"
+                    android:textColor="@color/keyword" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="@dimen/search_restaurant_cell_image_size"
+            android:layout_width="@dimen/search_restaurant_cell_score_width"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
@@ -100,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="8.2"
+                android:textColor="@color/score"
                 android:textSize="@dimen/search_restaurant_cell_score_text_size" />
 
             <TextView
@@ -107,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="불만 점수"
+                android:textColor="@color/score"
                 android:textSize="@dimen/search_restaurant_cell_score_label_text_size" />
         </LinearLayout>
     </LinearLayout>

@@ -25,6 +25,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="kitchen's star - Taste"
+                    android:textColor="@color/title"
                     android:textSize="@dimen/stat_detail_title_text_size" />
 
                 <TextView
@@ -32,26 +33,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="8.2"
+                    android:textColor="@color/score"
                     android:textSize="@dimen/stat_detail_title_text_size" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/stat_detail_keywords_height"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/common_margin_long"
                 android:padding="@dimen/common_margin_long">
 
                 <me.gujun.android.taggroup.TagGroup
                     android:id="@+id/keywords"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    app:atg_borderColor="@color/keyword"
+                    app:atg_textColor="@color/keyword" />
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/reviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layoutManager="LinearLayoutManager"/>
+                app:layoutManager="LinearLayoutManager" />
         </LinearLayout>
     </ScrollView>
 </layout>
